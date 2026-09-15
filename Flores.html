@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fine, You Caught Me ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #24000e, #720026, #180008);
+      overflow-x: hidden;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 700px;
+      padding: 35px 20px;
+      border-radius: 25px;
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 40px rgba(255, 0, 90, 0.25);
+    }
+
+    h1 {
+      font-size: clamp(25px, 6vw, 45px);
+    }
+
+    p {
+      font-size: clamp(16px, 4vw, 20px);
+      line-height: 1.7;
+    }
+
+    .loading {
+      margin: 25px auto;
+      width: 80%;
+      height: 12px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 0%;
+      height: 100%;
+      background: #ff4f81;
+      animation: load 4s forwards;
+    }
+
+    @keyframes load {
+      to {
+        width: 100%;
+      }
+    }
+
+    .message {
+      display: none;
+      animation: appear 2s ease forwards;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .roses {
+      font-size: clamp(45px, 12vw, 90px);
+      letter-spacing: 8px;
+      margin: 25px 0;
+      animation: bloom 2s ease infinite alternate;
+    }
+
+    @keyframes bloom {
+      from {
+        transform: scale(0.95);
+      }
+
+      to {
+        transform: scale(1.08);
+      }
+    }
+
+    .small {
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1 id="status">404: Feelings Not Found 🙃</h1>
+
+    <p id="loadingText">
+      Searching for a logical explanation...
+    </p>
+
+    <div class="loading">
+      <div class="progress"></div>
+    </div>
+
+    <div class="message" id="message">
+      <div class="roses">🌹🌹🌹</div>
+
+      <h1>Fine. You caught me. 🙄❤️</h1>
+
+      <p>
+        I like you.<br>
+        Happy now?
+      </p>
+
+      <p>
+        Please don't let this inflate your ego too much. 🤡
+      </p>
+
+      <p>
+        You are officially my favourite distraction.
+      </p>
+
+      <p class="small">
+        System status: Emotionally compromised.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.querySelector(".loading").style.display = "none";
+      document.getElementById("status").style.display = "none";
+      document.getElementById("loadingText").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    }, 4500);
+  </script>
+
+</body>
+</html>
